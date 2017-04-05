@@ -1,0 +1,24 @@
+.wrapper{
+  border: 1px solid black;
+}
+
+@mixin grid($count){
+  width: 100% / $count;
+}
+
+.items{
+  padding: 40px 0;
+  @include flex-box();
+  @include align-items(start);
+
+  .item{
+    @include grid(4);
+    height: 240px;
+
+    .container{
+      background-color: red;
+      height: 100%;
+      width: 100%;
+    }
+  }
+}

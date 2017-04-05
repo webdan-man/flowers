@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="script/jquery/slick-1.5.0/slick/slick.css"/>
+    <link rel="stylesheet" href="script/jquery/fancyBox/source/jquery.fancybox.css"/>
+    <link rel="stylesheet" href="style/style.css"/>
+    <link type="image/x-icon" href="favicon.ico" rel="shortcut icon">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+
+<div class="wrapper-all" id="app">
+    <!-- HEADER -->
+    <header class="header">
+        <div class="wrapper">
+
+        </div>
+    </header>
+
+    <!-- SECTION 1 -->
+    <section class="s1">
+        <div class="wrapper">
+            <button class="btn" v-on:click.prevent="modalToggle(1)">modal1</button>
+            <button class="btn" v-on:click.prevent="modalToggle(2)">modal2</button>
+            <button class="btn" v-on:click.prevent="toggleActive">toggle</button>
+
+            <form action="mail.php" method="post" v-on:submit.prevent="submit">
+                <input type="text" class="input" name="phone" placeholder="телефон">
+                <input type="text" class="input" name="name" placeholder="имя">
+                <input type="text" class="input" name="mail" placeholder="почта">
+                <button class="btn">send</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- SECTION 2 -->
+    <section class="s2">
+        <div class="wrapper">
+
+            <div class="items">
+                <div class="item">
+                    <div class="container">
+
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="container">
+
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="container">
+
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="container">
+
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- SECTION 3 -->
+    <section class="s3">
+        <div class="wrapper">
+
+        </div>
+    </section>
+
+    <!-- SECTION 4 -->
+    <section class="s4">
+        <div class="wrapper">
+
+        </div>
+    </section>
+
+    <!-- SECTION 5 -->
+    <section class="s5">
+        <div class="wrapper">
+
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="wrapper">
+
+        </div>
+    </footer>
+
+    <!-- MODAL WINDOW -->
+    <transition name="modal">
+        <div class="modal" v-show="modal.isOpen">
+            <div class="layout" v-on:click.prevent="modalToggle">
+
+            </div>
+
+            <transition name="fade">
+                <div class="popup" v-show="modal.number == 1">
+                    <div class="close" v-on:click.prevent="modalToggle"></div>
+
+                    <form action="mail.php" method="post" v-on:submit.prevent="submit">
+                        <h3 class="heading">test2</h3>
+
+
+
+                        <button class="btn"></button>
+                    </form>
+                </div>
+            </transition>
+
+            <transition name="fade">
+                <div class="popup_lg" v-show="modal.number == 2">
+                    <div class="close" v-on:click.prevent="modalToggle"></div>
+
+                    <form action="mail.php" method="post" v-on:submit.prevent="submit">
+                        <h3 class="heading">test2</h3>
+
+
+
+                        <button class="btn">ok</button>
+                    </form>
+                </div>
+            </transition>
+
+            <transition name="fade">
+                <div class="popup" v-show="modal.thanks">
+                    <div class="close" v-on:click.prevent="modalToggle"></div>
+
+                    <div class="popup_thanks">
+                        <h2>Thanks</h2>
+                    </div>
+                </div>
+            </transition>
+        </div>
+    </transition>
+</div>
+
+
+<!-- SCRIPT -->
+<script src="script/jquery/jquery.js"></script>
+<script src="script/jquery/jquery.inputmask.js"></script>
+<script src="script/jquery/slick-1.5.0/slick/slick.min.js"></script>
+<script src="script/jquery/fancyBox/source/jquery.fancybox.js"></script>
+<script src="script/vue/vue.min.js"></script>
+<script src="script/main.js"></script>
+
+</body>
+</html>

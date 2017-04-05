@@ -1,0 +1,29 @@
+.input{
+  &::-webkit-input-placeholder {color:inherit;}
+  &::-moz-placeholder          {color:inherit;}
+  &:-moz-placeholder           {color:inherit;}
+  &:-ms-input-placeholder      {color:inherit;}
+
+  &:hover{
+
+  }
+
+  &:focus{
+
+  }
+
+  &_error{
+    color: red!important;
+    border-color: red!important;
+  }
+}
+
+.btn{
+  &:hover{
+
+  }
+
+  &:focus{
+
+  }
+}
